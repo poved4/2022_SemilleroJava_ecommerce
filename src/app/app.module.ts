@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+// Components
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PaypalButtonsComponent } from './components/paypal-buttons/paypal-buttons.component';
+
+// Modules
+import { ShareModule } from './components/share/share.module';
+import { CatalogModule } from './components/catalog/catalog.module';
+import { ShoppingCartModule } from './components/shopping-cart/shopping-cart.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaypalButtonsComponent
   ],
   imports: [
+    ShareModule,
+    CatalogModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShoppingCartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

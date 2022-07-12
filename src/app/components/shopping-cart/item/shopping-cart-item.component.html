@@ -1,0 +1,10 @@
+<img src="{{ cartItem?.imageUrl }}" alt="{{ cartItem?.name }}" class="thumbnail" />
+
+<div class="info">
+  <span>{{ cartItem?.name }}</span>
+  <span class="info-price">{{ cartItem?.price | number: "1.2-2" }} €</span>
+</div>
+
+<button (click)="onDeleteClicked()" id="{{cartItem?.id}}">
+  <img src="/assets/close.svg" alt="Eliminar articulo" />
+</button>
